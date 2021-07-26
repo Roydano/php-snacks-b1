@@ -1,4 +1,43 @@
+<?php
 
+// creo l'array delle squadre di basket
+$basketMatch = [
+
+    [
+        'homeTeam' => 'Malandrini',
+        'guestTeam' => 'Birbantelli',
+        'scoreHomeTeam' => '106',
+        'scoreGuestTeam' => '95'
+    ],
+    [
+        'homeTeam' => 'Feroci',
+        'guestTeam' => 'Pacati',
+        'scoreHomeTeam' => '100',
+        'scoreGuestTeam' => '155'
+    ],
+    [
+        'homeTeam' => 'Diavoletti',
+        'guestTeam' => 'Angioletti',
+        'scoreHomeTeam' => '85',
+        'scoreGuestTeam' => '84'
+    ],
+    [
+        'homeTeam' => 'Giganti',
+        'guestTeam' => 'Dei',
+        'scoreHomeTeam' => '180',
+        'scoreGuestTeam' => '215'
+    ]
+];
+
+// inserisco in una variabile la lunghezza dell'array
+$basketMatchLength = count($basketMatch);
+
+var_dump($basketMatch);
+var_dump($basketMatchLength);
+
+
+
+?>
 
 
 
@@ -12,7 +51,24 @@
     <title>Snack b1 - php</title>
 </head>
 <body>
-    
+
+<!-- creiamo un div con all'interno un ciclo for che cicla su tutti gli array presenti nell'array $basketMatch e li stampa richiamandone la chiave -->
+   <div>
+        <?php for($i = 0; $i < $basketMatchLength; $i++) {?>
+            <p> 
+                <span><?php echo $basketMatch[$i]['homeTeam'] ?> -</span>
+
+                <span><?php echo $basketMatch[$i]['guestTeam'] ?> |</span>
+
+                <span><?php echo $basketMatch[$i]['scoreHomeTeam'] ?> -</span>
+
+                <span><?php echo $basketMatch[$i]['scoreGuestTeam'] ?></span>
+
+            </p>
+        <?php } ?>
+    </div>
+
+
 </body>
 </html>
 
